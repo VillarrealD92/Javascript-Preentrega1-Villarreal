@@ -7,7 +7,7 @@ const CONTRASENIA  = "CODER"
 let user  
 let pass
 let intentos; 
-const MAX_INTENTOS = 3
+const MAXINTENTOS = 3
 
 // FUNCION DE INDICE DE MASA CORPORAL
 function imc(height, weight){
@@ -18,7 +18,7 @@ function imc(height, weight){
 // INICIO DE SESION
 
 
-for (intentos = 1; intentos <= MAX_INTENTOS; intentos++) {
+for (intentos = 1; intentos <= MAXINTENTOS; intentos++) {
   user = prompt("Indique su usuario")
   pass = prompt("Indique su contraseña")
 
@@ -60,9 +60,12 @@ if ((USUARIO === user) && (CONTRASENIA === pass) ) {
             alert("Gracias por utilizar el medidor de índice de masa corporal. ¡Hasta luego!")
           } else if (respuesta !== "si") {
             alert("Respuesta inválida. Por favor, responde con 'Si' o 'No'.")
+            break
           }
     }
     
 } else {
     alert("Usuario y/o contraseña incorrectos. Refresca la pagina para intertarlo de nuevo")
 }
+
+// FIN
